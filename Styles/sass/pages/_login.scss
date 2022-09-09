@@ -1,0 +1,217 @@
+.login-body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $main-color;
+    background-image: linear-gradient(#F5F5F5, #F5F5F5);
+}
+
+.login-main {
+    width: 75%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    font-family: 'kanit', 'roboto', sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 0 5px 5px #00000022;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-bg {
+    width: 70%;
+    height: 100%;
+    background-image: url(../Styles/Images/cadastro.jpeg);
+    background: linear-gradient(#FDDA0D00, #FDDA0D55), url("../Styles/Images/cadastro.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-size: 130%;
+
+    p {
+        position: absolute;
+        // float: right;
+        right: 36%;
+        bottom: 9.5%;
+        color: white;
+        opacity: 0.5;
+        font-size: large;
+    }
+}
+
+.login-bg {
+    width: 70%;
+    height: 100%;
+    background-image: url(../Styles/Images/login-image.jpg);
+    background: linear-gradient(#FDDA0D00, #FDDA0D55), url("../Styles/Images/login-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-size: 145%;
+
+    p {
+        position: absolute;
+        // float: right;
+        right: 36%;
+        bottom: 9.5%;
+        color: white;
+        opacity: 0.3;
+        font-size: large;
+    }
+}
+
+.login-registro {
+    width: 30%;
+    height: fit-content;
+    background-color: white;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    hr {
+        width: 66%;
+        align-self: center;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .login {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        &__fieldset {
+            width: 66%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+
+            &__legend {
+                margin-top: 1em;
+                text-align: left;
+            }
+
+            &__logo {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &__img {
+                    margin-top: -1.4em; // Gambiarra
+                    max-width: 200px;
+                }
+            }
+
+            &__label {
+                font-weight: 300;
+                text-align: left;
+            }
+
+            &__input {
+                margin: 0.2em 0 1em;
+                padding: 0.6em;
+                height: 2em;
+            }
+
+            &__submit {
+                margin: 1em 0;
+                border: 1px solid #777;
+                background-color: $main-color;
+                height: 2em;
+                transition: all 200ms ease-in-out;
+                &:hover {
+                    transform: translate(-3px, -3px);
+                    box-shadow: 6px 6px black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1440px) {
+    .login-registro {
+        width: 30%;
+        max-height: 100%;
+        background-color: white;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        hr {
+            width: 66%;
+            align-self: center;
+        }
+    
+        p {
+            font-size: 14px;
+        }
+    
+        .login {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+    
+            &__fieldset {
+                width: 66%;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+    
+                &__legend {
+                    margin-top: 1em;
+                    text-align: left;
+                }
+    
+                &__logo {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    &__img {
+                        // display: none;
+                        margin-top: -1.4em; // Gambiarra
+                        max-width: 150px;
+                    }
+
+                    .hidden {
+                        display: none;
+                    }
+                }
+    
+                &__label {
+                    font-weight: 300;
+                    text-align: left;
+                }
+
+                &__submit {
+                    margin: 0.8em 0;
+                }
+            }
+        }
+    }
+}
