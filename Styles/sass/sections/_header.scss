@@ -48,7 +48,7 @@
         &__item {
             width: 170px;
             height: 150px;
-            border: 1px solid #777;
+            border: 1px solid #77777777;
             list-style: none;
             color: #fff;
             display: flex;
@@ -71,6 +71,7 @@
             &:hover {
                 border: 1px solid $main-color;
                 cursor: pointer;
+                transform: translateY(-3px);
             }
         }
     }
