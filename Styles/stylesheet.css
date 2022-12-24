@@ -27,6 +27,18 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: #db9f27; }
 
+.over-session {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 400; }
+  .over-session::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #ffde9e;
+    margin: 4px 10px; }
+
 .header {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Styles/Images/comemoracao.jpeg);
   background-position: center;
@@ -55,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
     width: 100%;
     margin: 0;
-    padding: 0 0 4em 0;
+    padding: 0 1em 4em 1em;
     justify-content: space-between; }
     .header__list__container__item {
       display: flex;
@@ -108,11 +120,10 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   height: 78px;
   padding: 0 1em; }
-  .navbar__logo {
-    width: 58px; }
-    .navbar__logo__responsive {
-      max-width: 100%;
-      height: auto; }
+  .navbar__logo__responsive {
+    filter: invert(87%) sepia(18%) saturate(1789%) hue-rotate(329deg) brightness(103%) contrast(101%);
+    max-width: 100%;
+    height: auto; }
   .navbar__container {
     display: flex;
     flex-direction: row;
@@ -170,5 +181,69 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: center;
     line-height: 2; } }
+.main__about__content {
+  max-width: 1024px;
+  margin: 3em auto;
+  display: grid;
+  padding: 0 1em;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1.5fr 1fr; }
+  .main__about__content__text {
+    hyphens: auto;
+    padding-right: 1em;
+    font-weight: 200;
+    color: #444; }
+    .main__about__content__text p:first-of-type {
+      margin-top: 2em; }
+  .main__about__content__image {
+    display: flex;
+    align-items: center; }
+    .main__about__content__image img {
+      width: 100%;
+      height: auto; }
+.main__about__data__container {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Images/vencedor-com-int.jpeg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  .main__about__data__container ul {
+    max-width: 1024px;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between; }
+    .main__about__data__container ul li {
+      margin: 1.5em 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .main__about__data__container ul li div:first-of-type {
+        font-size: 56px;
+        font-weight: 700;
+        color: #FFC451; }
+      .main__about__data__container ul li div:last-of-type {
+        color: #f5f5f5; }
+
+@media screen and (max-width: 1024px) {
+  .main__about__content {
+    display: block; }
+    .main__about__content__image {
+      display: none; }
+  .main__about__data__container ul {
+    padding: 2em;
+    flex-direction: column;
+    gap: 1em; }
+    .main__about__data__container ul li {
+      margin: 0; } }
+.footer {
+  background-color: #151515; }
+  .footer__copy span, .footer__copy strong {
+    color: #f5f5f5; }
+  .footer__copy a {
+    color: #FFC451; }
 
 /*# sourceMappingURL=stylesheet.css.map */

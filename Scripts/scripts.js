@@ -4,3 +4,4 @@ const menu = document.getElementById('menu');
 btnMenu.addEventListener('click', (e) => {
     menu.classList.toggle('active');
 })
+

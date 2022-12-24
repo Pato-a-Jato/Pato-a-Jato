@@ -1,0 +1,97 @@
+.main {
+    &__about {
+        &__content {
+            max-width: $screen-l;
+            margin: 3em auto;
+            display: grid;
+            padding: 0 1em;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1.5fr 1fr;
+
+            &__text {
+
+                p:first-of-type {
+                    margin-top: 2em;
+                }
+
+                hyphens: auto;
+                padding-right: 1em;
+                font-weight: 200;
+                color: #444;
+            }
+
+            &__image {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &__data {
+            &__container {
+                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Images/vencedor-com-int.jpeg);
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+
+                ul {
+                    max-width: $screen-l;
+                    padding: 0;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: row;
+                    list-style-type: none;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    li {
+                        margin: 1.5em 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        div:first-of-type {
+                            font-size: 56px;
+                            font-weight: 700;
+                            color: $main-color;
+                        }
+
+                        div:last-of-type {
+                            color: $gray-900;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-l) {
+    .main {
+        &__about {
+            &__content {
+                display: block;
+                &__image {
+                    display: none;
+                }
+            }
+            &__data {
+                &__container {
+                    ul {
+                        padding: 2em;
+                        flex-direction: column;
+                        gap: 1em;
+                        li {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

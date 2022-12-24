@@ -9,9 +9,12 @@
     padding: 0 1em;
 
     &__logo {
-        width: 58px;
+        
 
         &__responsive {
+            // font-size: 48px;
+            // color: $main-color;
+            filter: invert(87%) sepia(18%) saturate(1789%) hue-rotate(329deg) brightness(103%) contrast(101%);
             max-width: 100%;
             height: auto;
         }
