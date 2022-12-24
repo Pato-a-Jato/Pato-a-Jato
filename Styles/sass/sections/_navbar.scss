@@ -1,11 +1,15 @@
 .navbar {
+    max-width: $screen-l;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     padding: 0;
     justify-content: space-between;
+    height: 78px;
+    padding: 0 1em;
 
     &__logo {
-        width: 100px;
+        width: 58px;
 
         &__responsive {
             max-width: 100%;
@@ -20,11 +24,13 @@
         padding: 0;
         margin: 0;
         gap: 1em;
-
-        &__item {
-
+        &__item, &__ps {
+            a {
+                text-decoration: none;
+                color: $gray-900;
+            }
+            
         }
-
         &__ps {
             display: none;
         }
@@ -32,17 +38,30 @@
     &__menu {
         display: none;
     }
+    &__ps {
+        a {
+            text-decoration: none;
+            color: $main-color;
+        }
+    }
 }
 
 @media screen and (max-width: $screen-l) {
     .navbar {
         &__container {
+            padding-right: 1.5em;
             display: none;
-            &__ps {
+            width: fit-content;
+            text-align: right;
+
+            &__item, &__ps {
                 display: inline-block;
+                a {
+                    color: $davys-gray;
+                }
             }
         }
-        &__processo-seletivo {
+        &__ps {
             display: none;
         }
         &__menu {
@@ -55,9 +74,15 @@
             top: 0;
             right: 0;
             z-index: 1;
-            background-color: yellow;
+            height: 100vh;
+            width: 80vw;
+            max-width: 300px;
+            background-color: $gray-900;
+            border-top-left-radius: 2em;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            line-height: 2;
         }
     }
     
