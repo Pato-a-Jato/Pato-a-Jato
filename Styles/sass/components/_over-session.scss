@@ -1,0 +1,14 @@
+.over-session {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: 400;
+
+    &::after {
+        content: "";
+        width: 120px;
+        height: 1px;
+        display: inline-block;
+        background: #ffde9e;
+        margin: 4px 10px;
+    }
+}
