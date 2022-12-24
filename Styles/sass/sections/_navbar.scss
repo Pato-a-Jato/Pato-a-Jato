@@ -28,6 +28,10 @@
             a {
                 text-decoration: none;
                 color: $gray-900;
+                transition: all 300ms ease-in-out;
+                &:hover {
+                    color: $main-color;
+                }
             }
             
         }
@@ -37,11 +41,17 @@
     }
     &__menu {
         display: none;
+        i {
+            color: $main-color;
+        }
     }
     &__ps {
+        border: 1px solid $main-color;
+        padding: 0.5em 1em;
+        border-radius: 4px;
         a {
             text-decoration: none;
-            color: $main-color;
+            color: $gray-900;
         }
     }
 }

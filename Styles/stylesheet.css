@@ -28,37 +28,77 @@ h1, h2, h3, h4, h5, h6 {
   background: #db9f27; }
 
 .header {
-  background-color: #151515;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Styles/Images/comemoracao.jpeg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 110%;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 100vh; }
+  height: fit-content; }
   .header__title, .header__list {
     display: flex;
     max-width: 1024px;
-    margin: 0 auto; }
-  .header__list__container {
-    display: flex;
-    flex-direction: row; }
-    .header__list__container__item {
-      display: flex;
-      flex-direction: column; }
-
-@media screen and (max-width: 1024px) {
-  .header__title, .header__list {
-    display: flex;
-    max-width: 768px;
     margin: 0 auto;
     justify-content: center; }
-  .header__list {
+  .header__title {
+    padding: 0 1em;
+    text-align: center;
+    margin: 4em auto; }
+    .header__title h1 {
+      font-size: 64px;
+      font-weight: 700;
+      color: #f5f5f5; }
+      .header__title h1 span {
+        color: #FFC451; }
+  .header__list__container {
     display: flex;
-    justify-content: center; }
-    .header__list__container {
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 4em 0;
+    justify-content: space-between; }
+    .header__list__container__item {
       display: flex;
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
-      align-items: center; }
-      .header__list__container__item {
+      border: 1px solid #77777777;
+      width: 170px;
+      height: 150px;
+      padding: 1em; }
+      .header__list__container__item__icon {
+        color: #FFC451;
+        font-size: 2em; }
+      .header__list__container__item__text {
+        text-align: center;
+        color: #f5f5f5; }
+
+@media screen and (max-width: 1024px) {
+  .header {
+    background-size: cover;
+    background-attachment: unset; }
+    .header__title, .header__list {
+      display: flex;
+      max-width: 768px;
+      margin: 0 auto;
+      justify-content: center; }
+    .header__title h1 {
+      font-size: 32px; }
+    .header__list {
+      display: flex;
+      justify-content: center; }
+      .header__list__container {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        flex-direction: column; } }
+        gap: 1em;
+        padding: 1em; }
+        .header__list__container__item {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          padding: 0.5em 1em; } }
 .navbar {
   max-width: 1024px;
   margin: 0 auto;
@@ -82,14 +122,23 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1em; }
     .navbar__container__item a, .navbar__container__ps a {
       text-decoration: none;
-      color: #f5f5f5; }
+      color: #f5f5f5;
+      transition: all 300ms ease-in-out; }
+      .navbar__container__item a:hover, .navbar__container__ps a:hover {
+        color: #FFC451; }
     .navbar__container__ps {
       display: none; }
   .navbar__menu {
     display: none; }
-  .navbar__ps a {
-    text-decoration: none;
-    color: #FFC451; }
+    .navbar__menu i {
+      color: #FFC451; }
+  .navbar__ps {
+    border: 1px solid #FFC451;
+    padding: 0.5em 1em;
+    border-radius: 4px; }
+    .navbar__ps a {
+      text-decoration: none;
+      color: #f5f5f5; }
 
 @media screen and (max-width: 1024px) {
   .navbar__container {
