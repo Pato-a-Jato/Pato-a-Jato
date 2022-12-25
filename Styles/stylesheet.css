@@ -304,26 +304,24 @@ h1, h2, h3, h4, h5, h6 {
       border: 1px solid rgba(100, 100, 100, 0.1);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      text-align: center;
-      padding: 1em;
-      transition: all 250ms ease-in-out; }
+      transition: all 250ms ease-in-out;
+      border-radius: 12px; }
       .main__members__container__cell:hover {
         cursor: pointer;
         transform: translateY(-10px);
         box-shadow: 0 0 8px 8px rgba(100, 100, 100, 0.07); }
-      .main__members__container__cell i {
-        color: #FFC451;
-        font-size: 52px; }
-      .main__members__container__cell h3 a {
-        color: #333;
-        text-decoration: none;
-        transition: all 250ms ease-in-out; }
-        .main__members__container__cell h3 a:hover {
-          color: #FFC451; }
-      .main__members__container__cell p {
-        font-weight: 200; }
+      .main__members__container__cell__photo {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        height: 250px;
+        background-image: url(/Styles/Images/istockphoto-1327592449-612x612.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .main__members__container__cell__desc {
+        display: flex;
+        flex-direction: column;
+        padding: 1em; }
 
 @media screen and (max-width: 1024px) {
   .main__members {
