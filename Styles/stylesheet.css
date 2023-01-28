@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: unset; }
     .header__title, .header__list {
       display: flex;
-      max-width: 768px;
+      max-width: 425px;
       margin: 0 auto;
       justify-content: center; }
     .header__title h1 {
