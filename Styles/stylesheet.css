@@ -155,7 +155,6 @@ h1, h2, h3, h4, h5, h6 {
   .navbar__container {
     padding-right: 1.5em;
     display: none;
-    width: fit-content;
     text-align: right; }
     .navbar__container__item, .navbar__container__ps {
       display: inline-block; }
@@ -165,10 +164,13 @@ h1, h2, h3, h4, h5, h6 {
     display: none; }
   .navbar__menu {
     z-index: 2;
-    display: block;
-    font-size: 48px; }
-  .navbar .active {
     position: absolute;
+    display: block;
+    font-size: 48px;
+    top: 0;
+    right: 0.3em; }
+  .navbar .active {
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 1;

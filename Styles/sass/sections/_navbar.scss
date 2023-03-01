@@ -64,7 +64,7 @@
         &__container {
             padding-right: 1.5em;
             display: none;
-            width: fit-content;
+            // width: fit-content;
             text-align: right;
 
             &__item, &__ps {
@@ -79,11 +79,14 @@
         }
         &__menu {
             z-index: 2;
+            position: absolute;
             display: block;
             font-size: 48px;
+            top: 0;
+            right: 0.3em;
         }
         .active {
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             z-index: 1;

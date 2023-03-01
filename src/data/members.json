@@ -1,0 +1,16 @@
+[
+    {
+        "name": "ciclano de tal",
+        "cell": "estrutura",
+        "course": "engenharia mecanica",
+        "image_url": "/members/image.jpg",
+        "manager": "false"
+    },
+    {
+        "name": "fulano de tal",
+        "cell": "eletronica",
+        "course": "engenharia eletrica",
+        "image_url": "/members/image.jpg",
+        "manager": "true"
+    }
+]
