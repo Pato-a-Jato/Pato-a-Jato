@@ -135,20 +135,17 @@
                 <div class="main__operations__container__cell">
                     <i class="bi bi-camera"></i>
                     <h3><a href="#">Marketing</a></h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero voluptate cumque aliquid
-                        possimus explicabo modi.</p>
+                    <p>Responsável por promover a imagem da equipe e seus patrocinadores, além de atrair novos investimentos.</p>
                 </div>
                 <div class="main__operations__container__cell">
                     <i class="bi bi-piggy-bank"></i>
                     <h3><a href="#">Setor financeiro</a></h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero voluptate cumque aliquid
-                        possimus explicabo modi.</p>
+                    <p>Setor responsável por gerenciar as finanças da equipe, garantindo que as operações sejam viáveis e sustentáveis a longo prazo</p>
                 </div>
                 <div class="main__operations__container__cell">
                     <i class="bi bi-person-bounding-box"></i>
                     <h3><a href="#">Recursos humanos</a></h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero voluptate cumque aliquid
-                        possimus explicabo modi.</p>
+                    <p>Gerenciamento das políticas e práticas relacionadas aos membros da equipe e fora dela.</p>
                 </div>
             </div>
         </section>
@@ -269,22 +266,30 @@
         let i = 0;
         document.addEventListener('DOMContentLoaded', function() {
             const scroller = document.getElementById('scroller');
+            let state = 1;
             setInterval(() => {
-                const element = scroller.firstElementChild;
-                const secondElem = scroller.children[1];
+                // const element = scroller.firstElementChild;
+                // const secondElem = scroller.children[1];
 
-                // check if the element is out of view
-                if (i >= 200) {
-                    const copiedElement = element.cloneNode(true);
-                    scroller.appendChild(copiedElement);
-                    scroller.removeChild(element);
-                    i = 0;
-                }
+                // // check if the element is out of view
+                // if (i >= 200) {
+                //     const copiedElement = element.cloneNode(true);
+                //     scroller.appendChild(copiedElement);
+                //     scroller.removeChild(element);
+                //     i = 0;
+                // }
 
-                i++;
-
-                scroller.scrollLeft += 1.5; // scroll to the right by 1 pixel
-            }, 33); // repeat every 100 milliseconds
+                // i++;
+                if (state) {
+                    scroller.scrollLeft += 1.5; // scroll to the right by 1 pixel
+                    if (scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth)
+                        state = !state;
+                } else {
+                    scroller.scrollLeft -= 1.5; // scroll to the right by 1 pixel
+                    if (scroller.scrollLeft <= 1)
+                        state = !state;
+                }                
+            }, 66); // repeat every 100 milliseconds
         });
 
     </script>
