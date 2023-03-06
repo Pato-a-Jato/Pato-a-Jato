@@ -1,0 +1,54 @@
+.main {
+    &__sponsors {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 1em;
+        
+        &__container {
+          width: 100%;
+          display: flex;
+
+          &__items {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            gap: 50px;
+            overflow-x: hidden;
+
+
+            div {
+              // min-width: 100px;
+              height: 100%;
+              filter: grayscale(100%);
+              // height: auto;
+              // transition: all 250ms ease-in-out;  
+  
+              &:hover {
+                filter: none;
+              }
+              
+              img {
+                width: auto;
+                height: 100%;
+              }
+            }
+          }
+        }
+    }
+
+
+    @media screen and (max-width: $screen-l) {
+        &__sponsors {
+            max-width: $screen-m;
+        }
+    }
+
+    @media screen and (max-width: $screen-m) {
+        &__sponsors {
+            max-width: $screen-s;
+
+        }
+    }
+}
