@@ -286,10 +286,10 @@
                         state = !state;
                 } else {
                     scroller.scrollLeft -= 1.5; // scroll to the right by 1 pixel
-                    if (scroller.scrollLeft <= 1)
+                    if (scroller.scrollLeft <= 0)
                         state = !state;
                 }                
-            }, 66); // repeat every 100 milliseconds
+            }, 15); // repeat every 100 milliseconds
         });
 
     </script>
